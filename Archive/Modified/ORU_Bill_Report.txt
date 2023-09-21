@@ -1,0 +1,4 @@
+State	Total Bill Amount
+FL	1234.0
+
+Total	1234.0
