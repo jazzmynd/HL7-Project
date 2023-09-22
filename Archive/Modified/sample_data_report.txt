@@ -1,0 +1,8 @@
+CA: 21115
+IN: 64355
+MO: 1597
+NY: 5793
+TN: 7097
+TX: 9089
+Unknown: 10364
+Total Bill Amount: 119410
