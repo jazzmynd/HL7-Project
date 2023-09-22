@@ -46,13 +46,20 @@ To run the project, follow the steps below to execute each Python script in sequ
    python ORU_processing.py
 
 ## 📁 Expected Output
+
 After successfully running the project, you should observe the following outputs:
 
-1. Modified CSV files located in the Archive/Modified directory, named ADT_(TodaysDate)_Modified_file.csv and ORU_(TodaysDate)_Modified_file.csv.
+1. **Modified CSV Files:**
+   - Located in the `Archive/Modified` directory.
+   - Named `ADT_(TodaysDate)_Modified_file.csv` and `ORU_(TodaysDate)_Modified_file.csv`.
 
-2. Two text report files: ADT_Bill_Report.txt and ORU_Bill_Report.txt in the project directory, outlining the total bill amount for each state.
+2. **Text Report Files:**
+   - `ADT_Bill_Report.txt` and `ORU_Bill_Report.txt` in the project directory.
+   - Outlining the total bill amount for each state.
 
-3. adt_data .db file, writing the ADT_(TodaysDate)_Modified_file.csv file into a SQLite Database. 
+3. **SQLite Database File:**
+   - `adt_data.db` file, writing the `ADT_(TodaysDate)_Modified_file.csv` file into an SQLite Database.
+
 
 ## 🌟 Run Database
 
