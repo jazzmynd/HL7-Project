@@ -9,9 +9,9 @@ Welcome to the HL7 Project, developed by @jazzmynd!
 - [Installation and Setup](#-installation-and-setup)
 - [Running the Project](#-running-the-project)
 - [Expected Output](#-expected-output)
-- [Queries for Database](#-queries-for-database)
 - [Run Database](#-run-database)
- 
+- [Queries for Database](#-queries-for-database)
+
 ## 📘 Project Overview
 
 This Python-based project involves transferring the HL7 ADT and HL7 ORU to the csv file. The primary tasks involve manipulating data, generating modified file copies, and mapping the ADT and ORU file in to csv file followed the spec given in sample.csv. A bonus feature of the project is integrating csv file into SQLite Database.
@@ -67,43 +67,52 @@ After successfully running the project, you should observe the following outputs
 1. ** Navigate to the Database Folder **
    ```sh
 cd /path/to/your/database/folder
+    ```
 
 2. ** Open SQLite Shell**
    ```sh
 sqlite3 adt_data.db
+   ```
 
 3. ** List Tables **
    ```sh
 .tables
+   ```
 You should see "adt_records" if it has been created successfully.
 
 ## 🌟 Queries for Database
 1. ** Query the Table **
    ```sh
    SELECT * FROM adt_records;
+    ```  
 
 2. ** Count Rows in Table **
    ```sh
    SELECT COUNT(*) FROM adt_records;
+   ```
 
 3. ** Query Specific Columns **
    ```sh
    SELECT patient_id, patient_first_name, patient_last_name FROM adt_records;
+   ```
 
 4. ** Ordering Result **
    ```sh
    SELECT * FROM adt_records ORDER BY date_of_service DESC;
+   ```
 
 5. ** Limiting Results **
    ```sh
    SELECT * FROM adt_records LIMIT 10;
+   ```
 
 6. ** Update Results **
    ```sh
    UPDATE adt_records SET patient_email_address = 'new_email@example.com' WHERE patient_id = 'some_patient_id';
+   ```
 
 7. ** Delete Duplicatee Rows **
    ```sh
    DELETE FROM adt_records WHERE rowid NOT IN (SELECT MIN(rowid) FROM adt_records GROUP BY patient_id);
-
+   ```
 
