@@ -9,9 +9,9 @@ Welcome to the HL7 Project, developed by @jazzmynd!
 - [Installation and Setup](#-installation-and-setup)
 - [Running the Project](#-running-the-project)
 - [Expected Output](#-expected-output)
-- [Bonus Objective: Database Support](#-bonus-objective-database-support)
-- [Contributing and Issues](#-contributing-and-issues)
-
+- [Queries for Database](#-queries-for-database)
+- [Run Database](#-run-database)
+ 
 ## 📘 Project Overview
 
 This Python-based project involves transferring the HL7 ADT and HL7 ORU to the csv file. The primary tasks involve manipulating data, generating modified file copies, and mapping the ADT and ORU file in to csv file followed the spec given in sample.csv. A bonus feature of the project is integrating csv file into SQLite Database.
@@ -77,7 +77,7 @@ sqlite3 adt_data.db
 .tables
 You should see "adt_records" if it has been created successfully.
 
-## Queries for Database
+## 🌟 Queries for Database
 1. ** Query the Table **
    ```sh
    SELECT * FROM adt_records;
