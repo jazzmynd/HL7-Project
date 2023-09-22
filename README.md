@@ -67,17 +67,14 @@ After successfully running the project, you should observe the following outputs
 1. **Navigate to the Database Folder**
    ```sh
    cd /path/to/your/database/folder
-   ```
 
 2. **Open SQLite Shell**
    ```sh
    sqlite3 adt_data.db
-   ```
 
 3. **List Tables**
    ```sh
    .tables
-   ```
    You should see "adt_records" if it has been created successfully.
 
 ## 🌟 Queries for Database
