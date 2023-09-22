@@ -14,7 +14,7 @@ Welcome to the HL7 Project, developed by @jazzmynd!
 
 ## 📘 Project Overview
 
-This Python-based project involves transferring the HL7 ADT and HL7 ORU to the csv file. The primary tasks involve manipulating data, generating modified file copies, and mapping the ADT and ORU file in to csv file followed the spec given in sample.csv. A bonus feature of the project is integrating csv file into SQLite Database.
+This Python-based project involves transferring the HL7 ADT data and HL7 ORU data to the csv file. The primary tasks involve generating modified file copies and mapping the ADT and ORU fields in to csv columns following the spec given in sample.csv. A bonus feature of the project is integrating csv file into SQLite Database.
 
 ## 🛠 Prerequisites
 
