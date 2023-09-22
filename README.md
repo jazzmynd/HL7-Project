@@ -44,6 +44,7 @@ To run the project, follow the steps below to execute each Python script in sequ
 3.  **Process ORU Data::**
    ```sh
    python ORU_processing.py
+   ```
 
 ## 📁 Expected Output
 
