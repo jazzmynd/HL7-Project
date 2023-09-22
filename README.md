@@ -64,55 +64,55 @@ After successfully running the project, you should observe the following outputs
 
 ## 🌟 Run Database
 
-1. ** Navigate to the Database Folder **
+1. **Navigate to the Database Folder**
    ```sh
-cd /path/to/your/database/folder
-    ```
-
-2. ** Open SQLite Shell**
-   ```sh
-sqlite3 adt_data.db
+   cd /path/to/your/database/folder
    ```
 
-3. ** List Tables **
+2. **Open SQLite Shell**
    ```sh
-.tables
+   sqlite3 adt_data.db
    ```
-You should see "adt_records" if it has been created successfully.
+
+3. **List Tables**
+   ```sh
+   .tables
+   ```
+   You should see "adt_records" if it has been created successfully.
 
 ## 🌟 Queries for Database
-1. ** Query the Table **
+
+1. **Query the Table**
    ```sh
    SELECT * FROM adt_records;
-    ```  
+   ```
 
-2. ** Count Rows in Table **
+2. **Count Rows in Table**
    ```sh
    SELECT COUNT(*) FROM adt_records;
    ```
 
-3. ** Query Specific Columns **
+3. **Query Specific Columns**
    ```sh
    SELECT patient_id, patient_first_name, patient_last_name FROM adt_records;
    ```
 
-4. ** Ordering Result **
+4. **Ordering Result**
    ```sh
    SELECT * FROM adt_records ORDER BY date_of_service DESC;
    ```
 
-5. ** Limiting Results **
+5. **Limiting Results**
    ```sh
    SELECT * FROM adt_records LIMIT 10;
    ```
 
-6. ** Update Results **
+6. **Update Results**
    ```sh
    UPDATE adt_records SET patient_email_address = 'new_email@example.com' WHERE patient_id = 'some_patient_id';
    ```
 
-7. ** Delete Duplicatee Rows **
+7. **Delete Duplicate Rows**
    ```sh
    DELETE FROM adt_records WHERE rowid NOT IN (SELECT MIN(rowid) FROM adt_records GROUP BY patient_id);
    ```
-
