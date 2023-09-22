@@ -4,6 +4,7 @@ import os
 from collections import defaultdict
 from output_files_creation import create_output_files, modified_dir, oru_modified_file
 
+# ------Mapping----------
 create_output_files('ORU')
 
 # Path to the ORU file
@@ -175,7 +176,9 @@ for segment in segments:
 
 csv_data["#"] = record_count
     
+# -----------------------
 
+# --------Output---------
 # Print the extracted data for verification
 for column, value in csv_data.items():
     print(f"{column}: {value}")
@@ -194,7 +197,7 @@ with open(output_csv_file_path, 'w', newline='') as csv_file:
 # Initialize a variable to store the total bill amount
 total_bill_amount = 0
 
- #Read the generated CSV file
+# Read the generated CSV file
 bill_amount_by_state = defaultdict(float)
 
 with open(output_csv_file_path, 'r') as csvfile:
@@ -215,3 +218,4 @@ with open(report_file_path, 'w') as report_file:
     report_file.write(f"\nTotal\t{total_bill_amount}")
 
 print(f"Report has been successfully generated at {report_file_path}")
+# -----------------------

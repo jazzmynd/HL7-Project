@@ -76,7 +76,7 @@ def insert_to_database(data):
     if '#' in data:
         del data['#']
 
- # List of all column names except the 'id' since it is auto-incremented
+ # List of all column names except the 'id' cuz it is auto-incremented
     all_columns = [
     'patient_id', 'site_id', 'service_location', 'date_of_service', 'message_type',
     'message_time', 'message_id', 'account_number', 'discharge_disposition',
@@ -97,7 +97,6 @@ def insert_to_database(data):
     if extra_keys:
         raise ValueError(f"data contains keys not in all_columns: {extra_keys}")
     
-
     # Check each column, if it is not in data, add it with the value "n/a"
     for column in all_columns:
         if column not in data:
@@ -138,6 +137,7 @@ def insert_to_database(data):
 
 # ---------------------
 
+# ------Mapping--------
 create_output_files('ADT')
 
 # Path to the ADT file
@@ -306,7 +306,6 @@ for segment in segments:
         # Ethic Group
         csv_data['patient_ethnicity'] = fields[22]
 
-
 #####GT1 Segment
     if segment.startswith("GT1"):
         fields = segment.split('|')
@@ -336,7 +335,9 @@ csv_data["guarantor_address_2"] = guarantor_address_2
 csv_data["guarantor_city"] = guarantor_city
 csv_data["guarantor_state"] = guarantor_state
 csv_data["guarantor_zip"] = guarantor_zip
+# ---------------------
 
+# --- Output CSV ------
 # After writing the extracted data to the output CSV file
 insert_to_database(csv_data)
 
@@ -350,7 +351,9 @@ with open(output_csv_file_path, 'w', newline='') as csvfile:
     writer.writerow(csv_data)
 
 print(f"Data has been successfully extracted and saved to {output_csv_file_path}")
+# --------------------
 
+# --- Bill Amount ----
 # Initialize a variable to store the total bill amount
 total_bill_amount = 0
 
@@ -375,3 +378,4 @@ with open(report_file_path, 'w') as report_file:
     report_file.write(f"\nTotal\t{total_bill_amount}")
 
 print(f"Report has been successfully generated at {report_file_path}")
+# --------------------
