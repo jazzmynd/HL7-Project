@@ -45,8 +45,7 @@ To run the project, follow the steps below to execute each Python script in sequ
    ```sh
    python ORU_processing.py
 
-
-##  📁 Expected Output
+## 📁 Expected Output
 After successfully running the project, you should observe the following outputs:
 
 1. Modified CSV files located in the Archive/Modified directory, named ADT_(TodaysDate)_Modified_file.csv and ORU_(TodaysDate)_Modified_file.csv.
@@ -55,7 +54,7 @@ After successfully running the project, you should observe the following outputs
 
 3. adt_data .db file, writing the ADT_(TodaysDate)_Modified_file.csv file into a SQLite Database. 
 
-##  🌟 Run Database
+## 🌟 Run Database
 
 1. ** Navigate to the Database Folder **
    ```sh
@@ -70,7 +69,7 @@ sqlite3 adt_data.db
 .tables
 You should see "adt_records" if it has been created successfully.
 
-##  Queries for Database
+## Queries for Database
 1. ** Query the Table **
    ```sh
    SELECT * FROM adt_records;
