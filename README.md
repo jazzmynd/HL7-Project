@@ -75,6 +75,7 @@ After successfully running the project, you should observe the following outputs
 3. **List Tables**
    ```sh
    .tables
+   ```
    You should see "adt_records" if it has been created successfully.
 
 ## 🌟 Queries for Database
