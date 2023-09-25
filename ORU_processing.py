@@ -4,6 +4,7 @@ import os
 from collections import defaultdict
 from output_files_creation import create_output_files, modified_dir, oru_modified_file
 import pandas as pd
+import numpy as np
 
 # -------Add Sample CSV's Lines with ORU type------------
 
@@ -239,8 +240,13 @@ import pandas as pd
 # Read the generated CSV file
 df = pd.read_csv(output_csv_path)
 
-# Replace empty or whitespace-only strings in 'patient_state' with 'Unknown'
-df.loc[df['patient_state'].str.strip() == '', 'patient_state'] = 'Unknown'
+# Replace both NaN values and whitespace-only strings in 'patient_state' with 'Unknown'
+df['patient_state'].replace('', 'Unknown', inplace=True)
+df['patient_state'].replace(np.nan, 'Unknown', inplace=True)
+
+# Alternatively, use loc to replace both empty/whitespace-only strings and NaN values in one line
+df.loc[df['patient_state'].isna() | (df['patient_state'].str.strip() == ''), 'patient_state'] = 'Unknown'
+
 
 # Group by 'patient_state' and sum 'bill_amount'
 bill_amount_by_state = df.groupby('patient_state')['bill_amount'].sum()
