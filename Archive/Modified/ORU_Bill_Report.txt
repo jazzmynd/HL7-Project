@@ -1,4 +1,5 @@
 State	Total Bill Amount
-FL	1234.0
+FL	1234
+IN	661
 
-Total	1234.0
+Total	1895

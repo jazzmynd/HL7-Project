@@ -17,12 +17,19 @@ oru_modified_file = f"ORU_{today_date}_Modified_file.csv"
 def create_output_files(file_type):
     os.makedirs(modified_dir, exist_ok=True)
 
+    file_path = None  # Initialize the file_path variable
+    
     if file_type == 'ADT':
-        open(os.path.join(modified_dir, adt_modified_file), "w").close()
+        file_path = os.path.join(modified_dir, adt_modified_file)
+        open(file_path, "w").close()
     elif file_type == 'ORU':
-        open(os.path.join(modified_dir, oru_modified_file), "w").close()
+        file_path = os.path.join(modified_dir, oru_modified_file)
+        open(file_path, "w").close()
     else:
         print(f"Unknown file type: {file_type}. No output file was created.")
+    
+    return file_path  # Return the created file path
+
 
 if __name__ == "__main__":
     create_output_files()

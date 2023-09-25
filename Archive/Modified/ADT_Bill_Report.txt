@@ -1,4 +1,10 @@
 State	Total Bill Amount
-CA	1234.0
+CA	22349
+IN	45787
+MO	1597
+NY	5793
+TN	5547
+TX	6400
+Unknown	10364
 
-Total	1234.0
+Total	97837
